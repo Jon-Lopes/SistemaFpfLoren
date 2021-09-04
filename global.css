@@ -1,0 +1,39 @@
+/*primeiro, resetar todos os elementos*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*declarando as cores que vou usar*/
+:root{
+--white:#fff;
+--background: #f2f3f5;
+--text: #555555;
+--blue-dark:#4953b8;
+--blue-light:#2aa9e0;
+--black:#000000;
+}
+
+/*fazendo o fundo e alguns elementos*/
+body{
+    background: var(--background);
+    color: var(--text);
+}
+body, input, textarea, button{
+    font:400 1rem "Inter", sans-serif;
+}
+button{
+    cursor: pointer;
+    height: 80px;
+    width: 250px;
+    background-color: var(--blue-light);
+    border-radius: 10px;
+    text-transform: uppercase;
+    font: bold 30px "Inter", sans-serif;
+    color: var(--white);
+    padding: 0.5rem;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
