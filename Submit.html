@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/global.css" type="text/css">
-    <title>Home</title>
+    <title>Enviar</title>
 </head>
 
 <body>
@@ -18,22 +18,24 @@
         <p id='logo'>Loren Ipsum Inc.</p>
     </header>
 
-    <!--4 opcoes de botao estao aqui-->
+    <!--DIV com formulario para preencher informacoes dos projetos, requisitos: 
+        1 - todos os campos sao obrigatorios;
+        2 - checar se o nome do projeto ja existe;
+        3 - formato das datas DD/MMM/AAAA;
+        4 - campos INT nao podem aceitar letras|simbolos-->
+    <div class='mainDiv'>
+        <p><b>Informações do Projeto</b></p>
+        <form id="infoProj" action="" method="POST">
+            <input type="name">
+            <input type="date">
+        </form>
+    </div>
+    <!--Botao Enviar fica disabled ate que todos os campos sejam preenchidos-->
     <div class='mainDiv'>
         <div class='divBtn'>
-            <button id='cadastrar1'>Cadastrar</button>
-            <button id='editar1'>Editar</button>
-            <button id='excluir1'>Excluir</button>
-            <button id='simular1'>Simular</button>
+            <button disabled form="infoProj" id='enviar1'>Enviar</button>
         </div>
     </div>
-
-    <!--Segue a tabela com projetos. Os projetos podem ser selecionados-->
-    <!-- <div class='mainDiv'>
-        <iframe style='width: 75%; aspect-ratio: 16/9;' scrolling:'no'
-            src="https://www.netplanter.com/how-to-center-a-div-p-or-other-html-elements/#:~:text=Center%20HTML%20elements%20by%20text-align%20property%20Center%20a,align%20a%20div%20or%20p%20element%20as%20well."
-            </iframe>
-    </div> -->
 
     <!--javaScript, controlando o comportamento dos botoes-->
     <script src="js/javaScriptCtrl.js" type="text/javascript"></script>
