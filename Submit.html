@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/global.css" type="text/css">
-    <title>Enviar</title>
+    <title>Lorem Enviar</title>
 </head>
 
 <body>
@@ -25,18 +25,24 @@
         4 - campos INT nao podem aceitar letras|simbolos-->
     <div class='mainDiv'>
         <p><b>Informações do Projeto</b></p>
+        <p>Todos os campos são obrigatórios</p>
         <form id="infoProj" action="" method="POST">
-            <input type="name">
-            <input type="date">
+            <label>Nome do Projeto <input name="formNome" type="text" required></label>
+            <label>Data de Início <input name="formDataInicio" type="date" placeholder="dd-mm-yyyy" value=""
+                    min="2008-08-08" max="2035-12-31" required></label>
+            <label>Data de Término <input name="formDataFim" type="date" placeholder="dd-mm-yyyy" value=""
+                    min="2008-08-08" max="2035-12-31" required></label>
+            <label>Valor do Projeto <input name="formValor" type="number" step=".01" required></label>
+            <label>Nível de Risco <input name="formRisco" type="number" min="0" max="2" required></label>
+            <label>Membros do Projeto <input name="formMembros" type="text" required></label>
         </form>
     </div>
-    <!--Botao Enviar fica disabled ate que todos os campos sejam preenchidos-->
+    <!--Botao que envia o formulario-->
     <div class='mainDiv'>
         <div class='divBtn'>
-            <button disabled form="infoProj" id='enviar1'>Enviar</button>
+            <button type="submit" form="infoProj" id='enviar1'>Enviar</button>
         </div>
     </div>
-
     <!--javaScript, controlando o comportamento dos botoes-->
     <script src="js/javaScriptCtrl.js" type="text/javascript"></script>
 </body>

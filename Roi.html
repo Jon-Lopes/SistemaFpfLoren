@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/global.css" type="text/css">
-    <title>Simular</title>
+    <title>Lorem Simular</title>
 </head>
 
 <body>
@@ -25,15 +25,16 @@
         4 - campos INT nao podem aceitar letras|simbolos-->
     <div class='mainDiv'>
         <p><b>Simular Retorno de Investimento</b></p>
+        <p>Todos os campos são obrigatórios</p>
         <form id="roiProj" action="" method="POST">
-            <input type="name">
-            <input type="date">
+            <label>Nome do Projeto <input name="formNome" type="text" required></label>
+            <label>Valor do Investimento <input name="formInvest" type="number" step=".01" required></label>
         </form>
     </div>
-    <!--Botao Enviar fica disabled ate que todos os campos sejam preenchidos-->
+    <!--Botao que envia o formulario-->
     <div class='mainDiv'>
         <div class='divBtn'>
-            <button id='simular1'>Simular</button>
+            <button type="submit" form="infoProj" id='simular2'>Simular</button>
         </div>
     </div>
 
